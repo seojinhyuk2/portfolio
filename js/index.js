@@ -8,20 +8,21 @@ window.onload = function(){
             header.classList.remove("active")
         }
     })
-    //모바일 메뉴 버튼
-    let moMenuBtn = document.querySelector(".mo-menu-btn")
-    let sideMenu = document.querySelector(".side-menu")
-    moMenuBtn.addEventListener("clcik", function(){
-        sideMenu.classList.toggle("active")
-        this.classList.toggle("active")
-    })
-    window.addEventListener("resize",function(){
-        let winWidth =window.innerWidth
-        if(winWidth >768){
-            sideMenu.classList.remove("active")
-            moMenuBtn.classList.remove("active")
-        }
-    })
+      //모바일 메뉴 버튼
+      let moMenuBtn = document.querySelector(".mo-menu-btn")
+      let sideMenu = document.querySelector(".side-menu")
+      moMenuBtn.addEventListener("click", function(){
+          sideMenu.classList.toggle("active")
+          this.classList.toggle("active")
+      })
+      window.addEventListener("resize",function(){
+          let winWidth = window.innerWidth
+          if(winWidth > 768){
+              sideMenu.classList.remove("active")
+              moMenuBtn.classList.remove("active")
+          }
+      })
+  
     
     let homeTyped = new Typed(".home-text",{
         strings:["안녕하세요","영상제작자<br>서진혁입니다"],
